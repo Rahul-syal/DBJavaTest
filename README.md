@@ -1,4 +1,3 @@
-======================================
 
 This is a Spring Boot RESTful application which can serve the following Account operations:
 
@@ -9,16 +8,13 @@ This is a Spring Boot RESTful application which can serve the following Account 
 How to run
 ----------
 
-Build the project using gradle. From project root:
+Build the project using gradle command:
 
 ```
 ./gradlew clean build
 ```
 
-Once the project is built, you can run the jar as follows:
 
-```
-java -jar build/libs/Java\ Challenge-0.0.1-SNAPSHOT.jar
 ```
 
 Create Credit/Debit Accounts
