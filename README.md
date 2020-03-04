@@ -15,8 +15,6 @@ Build the project using gradle command:
 ```
 
 
-```
-
 Create Credit/Debit Accounts
 Sample Requests:
 ```
