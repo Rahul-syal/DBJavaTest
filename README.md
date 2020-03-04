@@ -1,4 +1,3 @@
-The Asset Management Digital Challenge
 ======================================
 
 This is a Spring Boot RESTful application which can serve the following Account operations:
