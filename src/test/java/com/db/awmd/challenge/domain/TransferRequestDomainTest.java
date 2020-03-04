@@ -17,12 +17,25 @@ public class TransferRequestDomainTest {
 	
 	@Test
 	public void createTransferRequest(){
-		TransferRequest TransferRequest = new TransferRequest("Debit-123","Credit-123",new BigDecimal("20.00"));
-		assertThat(TransferRequest.getFromAccountId()).isEqualTo("Debit-123");
-		assertThat(TransferRequest.getToAccountId()).isEqualTo("Credit-123");
-		assertThat(TransferRequest.getAmount()).isEqualTo(new BigDecimal("20.00"));
+		TransferRequest transferRequest = new TransferRequest("Debit-123","Credit-123",new BigDecimal("20.00"));
+		
+		assertThat(transferRequest.getFromAccountId()).isEqualTo("Debit-123");
+		assertThat(transferRequest.getToAccountId()).isEqualTo("Credit-123");
+		assertThat(transferRequest.getAmount()).isEqualTo(new BigDecimal("20.00"));
 		
 		
 	}
-
+	@Test
+	public void createTransferSetRequest(){
+		TransferRequest transferRequest = new TransferRequest();
+		transferRequest.setAmount(new BigDecimal("20.00"));
+		transferRequest.setFromAccountId("Debit-123");
+		transferRequest.setToAccountId("Credit-123");
+		transferRequest.toString();
+		assertThat(transferRequest.getFromAccountId()).isEqualTo("Debit-123");
+		assertThat(transferRequest.getToAccountId()).isEqualTo("Credit-123");
+		assertThat(transferRequest.getAmount()).isEqualTo(new BigDecimal("20.00"));
+		
+		
+	}
 }

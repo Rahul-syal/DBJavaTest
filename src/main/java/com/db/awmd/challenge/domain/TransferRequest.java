@@ -27,6 +27,9 @@ public class TransferRequest {
 	@NotNull
 	  @Min(value = 0, message = "Amount must be positive.")
 	  private BigDecimal amount;
+	public TransferRequest(){
+		
+	}
 	
 	@JsonCreator
     public TransferRequest(@JsonProperty("fromAccountId") String fromAccountId,
@@ -36,6 +39,13 @@ public class TransferRequest {
         this.toAccountId = toAccountId;
         this.amount = amount;
     }
+
+	@Override
+	public String toString() {
+		return "TransferRequest [fromAccountId=" + fromAccountId + ", toAccountId=" + toAccountId + ", amount=" + amount
+				+ "]";
+	}
+	
 	
 	
 }
